@@ -59,11 +59,28 @@ sh download_pretrain.sh
 
 ## Training command
 
-### Train VIT baseline with/without Adan
+### 1. Train VIT baseline with/without Adan
 
 If you want to run on colab or Jupyter notebook, here is the notebook file:
 
 [Train_Vit](https://github.com/stony0411/Mini-Project-02/tree/main/Stark/experiments/stark_s)
 
-Train the 
+Train on HPC:
 
+```!python ```
+
+### 2. Train Width and depth Pruning for VIT 
+
+Train on HPC:
+
+```
+python main_wdpruning.py --arch deit_base --data-set CIFAR10 --batch-size 128 --data-path ../data/ --output_dir /cifar --classifiers 10 
+```
+
+## Results and evaluation
+
+![](../main/plot.png)
+
+## Reference
+
+[Aadn](https://github.com/sail-sg/Adan)
