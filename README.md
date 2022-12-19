@@ -51,11 +51,13 @@ sh download_pretrain.sh
   
 </div>
 
-- `.py` -- Run for  training
-- `run_hpc.py` - Run for normal training
-- `.py` - Run for 
-- `utilization.py` - See GPU utilization for Current Machines
-- `plot_hpml.py` - Show the graph of calculation result 
+- `vit_adan.py` -- Run for  training Vit baseline/with adan optimizer
+- `vit_adan.ipynb` - Run for training Vit baseline/with adan optimizer(colab)
+- `main_wdpruning.py` - Run for  pruning and training for VIT
+- `utils.py` - See GPU utilization for Current Machines
+- `download_pretrain.sh` - download pre-trained Vit models for pruning
+- `results` -shows the plot of our results
+- `logs` -shows the training log
 
 ## Training command
 
@@ -63,7 +65,7 @@ sh download_pretrain.sh
 
 If you want to run on colab or Jupyter notebook, here is the notebook file:
 
-[Train_Vit](https://github.com/stony0411/Mini-Project-02/tree/main/Stark/experiments/stark_s)
+[Train_Vit](https://github.com/jeremin77/HPML9143_Project/blob/main/vit_adan.ipynb)
 
 Train on HPC:
 
