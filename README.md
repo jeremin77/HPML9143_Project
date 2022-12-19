@@ -67,20 +67,41 @@ If you want to run on colab or Jupyter notebook, here is the notebook file:
 
 Train on HPC:
 
-```!python ```
+```python vit_adan.py```
 
 ### 2. Train Width and depth Pruning for VIT 
 
-Train on HPC:
+Prune and Train on HPC:
 
 ```
 python main_wdpruning.py --arch deit_base --data-set CIFAR10 --batch-size 128 --data-path ../data/ --output_dir /cifar --classifiers 10 
 ```
 
+Only prune on width:
+
+
+```
+python main_wdpruning.py --arch deit_base --data-set CIFAR10 --batch-size 128 --data-path ../data/ --output_dir /cifar --classifiers 12
+```
+
+Test the amout of parameters, GPU throughput of pruned transformer:
+```
+python masked_parameter_count.py --arch deit_base --pretrained_dir logs/checkpoint.pth --eval_batch_size 1024 --classifiers 10 --classifier_choose 10
+```
+Note that '--classifier_choose' means choose which classifier to prune. '--classifier_choose 12' means choose the last classifier. 
+
+
 ## Results and evaluation
 
-![](../main/plot.png)
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/1.png" width="900" height="300" >
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/2.png" width="900" height="300" >
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/3.png" width="900" height="300" >
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/4.png" width="900" height="300" >
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/5.png" width="900" height="300" >
+<img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/6.png" width="900" height="300" >
 
 ## Reference
 
-[Aadn](https://github.com/sail-sg/Adan)
+[1.Aadn](https://github.com/sail-sg/Adan)
+
+[2.Width and Depth Pruning for Vision Transformers](https://www.aaai.org/AAAI22Papers/AAAI-2102.FangYu.pdf)
