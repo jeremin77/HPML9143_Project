@@ -155,3 +155,12 @@ After training, models will be saved in the checkpoint folder with ckpt_<model_t
 [1.Aadn](https://github.com/sail-sg/Adan)
 
 [2.Width and Depth Pruning for Vision Transformers](https://www.aaai.org/AAAI22Papers/AAAI-2102.FangYu.pdf)
+
+## Code reuse
+
+[Width and Depth Pruning for Vision Transformers](https://github.com/andyrull/width-and-Depth-pruning-for-Vision-Transformer)
+
+[Aadn](https://github.com/sail-sg/Adan)
+
+[vit-pytorch](https://github.com/lucidrains/vit-pytorch)
+
