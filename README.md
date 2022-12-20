@@ -113,10 +113,10 @@ Adam:
 ```
 python3 mainADAM.py
 ```
-All parameters of optimizers are default parameters as recommended. After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth. Code in folder [Resnet18 with Adan, Adam and SGD] (https://github.com/jeremin77/HPML9143_Project/tree/main/Resnet18%20with%20Adan%2C%20Adam%20and%20SGD)
+All parameters of optimizers are default parameters as recommended. After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth. Code in folder Resnet18 with Adan, Adam and SGD
 
 
-### 3. Train Vit-B_16 using Adan, SGD, Adam
+### 4. Train Vit-B_16 using Adan, SGD, Adam
 
 Adan:
 
@@ -136,7 +136,7 @@ Adam:
 python3 trainAdam.py --name cifar10-100_500 --dataset cifar10 --model_type ViT-B_16
 ```
 
-After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth. Training 
+After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth. Code in folder ViT-pytorch-main
 
 
 
