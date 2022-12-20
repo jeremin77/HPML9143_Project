@@ -93,6 +93,54 @@ python masked_parameter_count.py --arch deit_base --pretrained_dir logs/checkpoi
 Note that '--classifier_choose' means choose which classifier to prune. '--classifier_choose 12' means choose the last classifier. 
 
 
+
+### 3. Train ResNet using Adan, SGD, Adam
+
+Adan:
+
+```
+python3 mainADAN.py
+```
+
+SGD:
+
+```
+python3 mainSGD.py
+```
+
+Adam:
+
+```
+python3 mainADAM.py
+```
+All parameters of optimizers are default parameters as recommended. After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth
+
+
+### 3. Train Vit-B_16 using Adan, SGD, Adam
+
+Adan:
+
+```
+python3 trainAdan.py --name cifar10-100_500 --dataset cifar10 --model_type ViT-B_16
+```
+
+SGD:
+
+```
+python3 trainSGD.py --name cifar10-100_500 --dataset cifar10 --model_type ViT-B_16
+```
+
+Adam:
+
+```
+python3 trainAdam.py --name cifar10-100_500 --dataset cifar10 --model_type ViT-B_16
+```
+
+After training, models will be saved in the checkpoint folder with ckpt_<model_type>.pth
+
+
+
+
 ## Results and evaluation
 
 <img src="https://github.com/jeremin77/HPML9143_Project/blob/main/results/1.png" width="900" height="300" >
